@@ -1,0 +1,59 @@
+@font-face {
+	font-family: Inter; 
+	src: url("../fonts/Inter-VariableFont_slnt,wght.ttf");
+} 
+     
+.hero {
+    background-color: #eee;
+}
+
+.heroimg {
+    width: 23%;
+}
+
+.card-title {
+    color: #0B6500;
+}
+
+.n4s-date {
+    color: #0B6500;
+}
+
+.navbar-brand {
+    border: none;
+}
+
+.nav-link {
+    color: #078EEE;
+}
+
+.custom-logo-link {
+    border: none;
+}
+
+.custom-logo {
+    max-height: 50px;
+    widht: auto;
+}
+
+body {
+	font-family: Inter;
+	color:#01132E;
+	font-size: 1.2em; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #0B6500;
+	font-family: #0B6500;
+}
+
+a {
+    text-decoration: none;
+    color: #078EEE;
+    border-bottom: 3px solid #078EEE;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #eee;
+}

@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.navbar-nav .nav-link {
+  font-size: 1.125rem;     /* 18px */
+  color: #006400 !important;/* тёмно-зелёный */
+  padding: 0.5rem 1rem;     /* увеличить «кликабельную» область */
+}
+
+/* 2. Цвет при наведении */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #004d00 !important;
+}
+
+/* 3. Отступ между пунктами */
+.navbar-nav .nav-item + .nav-item {
+  margin-left: 1rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif; /* ваш заголовочный шрифт */
+  font-size: 3rem;                        /* крупный размер */
+  color: #006400;                         /* темно-зеленый */
+  font-weight: 700;                       /* максимально жирный */
+  margin-bottom: 1rem;
+}
+
+h3.section-subheading {
+  font-family: 'Montserrat', sans-serif; /* жирный геометрический гротеск */
+  font-weight: 700;                     /* максимальный вес */
+  font-size: 2rem;                      /* тот же размер, что и раньше */
+  color: #006400;                       /* темно-зелёный */
+  text-transform: uppercase;            /* все буквы заглавные */
+  letter-spacing: 0.02em;               /* небольшие межбуквенные интервалы */
+  margin-bottom: 1rem;
+}
+
+h4.section-subheading {
+  font-size: 2rem;
+  color: #006400;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.media-equal {
+  object-fit: cover;   /* заполнить блок, кадрируя содержимое */
+}
+
+p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, "Helvetica Neue", Arial,
+               "Noto Sans", sans-serif,
+               "Apple Color Emoji", "Segoe UI Emoji",
+               "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.25rem;
+  line-height: 1.7;
+}
+
+.media-wrapper {
+  overflow: hidden;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.13), 0 1.5px 5px 0 rgba(0,0,0,0.09);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.object-fit-contain {
+  object-fit: contain;
+}
+
+.media-adopt-height {
+  height: 700px;    /* подберите нужное число */
+}
+
+@media (max-width: 768px) {
+  .media-adopt-height {
+    height: 500px;  /* адаптация для планшетов/мобилок */
+  }
+}
+
+#adopt-dog-day .adopt-text-col {
+  padding-bottom: 130px; /* Подберите под свой скриншот! */
+  height: 700px;         /* Совпадает с media-adopt-height */
+}
+
+@media (max-width: 991.98px) {
+  #adopt-dog-day .adopt-text-col {
+    height: 500px;      /* Под планшеты */
+    padding-bottom: 60px;
+  }
+}
+@media (max-width: 575.98px) {
+  #adopt-dog-day .adopt-text-col {
+    height: 300px;      /* Для смартфонов */
+    padding-bottom: 20px;
+  }
+}
+
+img, video {
+  border-radius: 16px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.13), 0 1.5px 5px 0 rgba(0,0,0,0.09);
+  background: #fff;
+}
+
+img.no-shadow {
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
