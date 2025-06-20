@@ -65,15 +65,8 @@ p {
   object-fit: contain;
 }
 
-.media-adopt-height {
-  height: 700px;    /* подберите нужное число */
-}
-
 @media (max-width: 768px) {
-}
-
-#adopt-dog-day .adopt-text-col {
-  padding-bottom: 130px; /* Подберите под свой скриншот! */
+  
 }
 
 @media (max-width: 991.98px) {
