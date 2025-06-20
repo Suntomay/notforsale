@@ -21,12 +21,17 @@
   color: #006400;                         /* темно-зеленый */
   font-weight: 700;                       /* максимально жирный */
   margin-bottom: 1rem;
+  margin-top: 0 !important;                     /* или 0, если нужно совсем вплотную */
+}
+
+section, .py-5 {
+  padding-top: 1rem !important; /* или 0, если нужен край */
 }
 
 h3.section-subheading {
   font-family: 'Montserrat', sans-serif; /* жирный геометрический гротеск */
   font-weight: 700;                     /* максимальный вес */
-  font-size: 2rem;                      /* тот же размер, что и раньше */
+  font-size: 1.2rem;                      /* тот же размер, что и раньше */
   color: #006400;                       /* темно-зелёный */
   text-transform: uppercase;            /* все буквы заглавные */
   letter-spacing: 0.02em;               /* небольшие межбуквенные интервалы */
@@ -70,7 +75,9 @@ p {
 }
 
 @media (max-width: 991.98px) {
-
+  .section-subheading {
+    font-size: 1.1rem;
+  }
 }
 
 img, video {
@@ -87,7 +94,7 @@ img.no-shadow {
 
 @media (max-width: 575px) {
   h2.section-title { font-size: 2.2rem; }
-  h3.section-subheading { font-size: 1.6rem; }
+  h3.section-subheading { font-size: 1rem; }
   p { font-size: 1.1rem; }
   #news img { width: 100% !important; height: auto !important; }
 }
