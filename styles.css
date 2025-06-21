@@ -94,6 +94,38 @@ img.no-shadow {
   background: none !important;
 }
 
+.contact-info {
+  font-size: 0.5rem;              /* вместо 1.25rem или 1.125rem */
+  color: #000;              /* оставляем тёмно-зелёный для не-ссылочного текста */
+  margin-bottom: 0.5rem;
+}
+
+.contact-info .contact-link {
+  color: #006400;           /* темно-зелёный */
+  text-decoration: none;
+  transition: color 0.2s;  
+}
+
+/* 2) Ссылки в контактной строке — тёмно-зелёные */
+.contact-info a {
+  color: #006400;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+/* 3) При наведении/фокусе — чуть светлее */
+.contact-info a:hover,
+.contact-info a:focus {
+  color: #008000;               /* светло-зелёный оттенок */
+  text-decoration: underline;
+}
+
+.contact-info,
+.contact-info p,
+.contact-info a {
+  font-size: 0.8rem !important;   /* ~12px — вместо 0.875rem (14px) */
+}
+
 @media (max-width: 575px) {
   h2.section-title { font-size: 2.2rem;
   margin-bottom: 1.2rem; 
@@ -107,6 +139,11 @@ img.no-shadow {
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+  .contact-info,
+  .contact-info p,
+  .contact-info a {
+    font-size: 0.7rem !important;  /* ~11px */
   }
 }
 
