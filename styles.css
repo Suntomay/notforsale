@@ -15,13 +15,21 @@
   margin-left: 1rem;
 }
 
+.news-main {
+  margin-bottom: 7rem;
+}
+
+h2.section-title:not(.news-main) {
+  margin-bottom: 6rem !important;
+}
+
 .section-title {
   font-family: 'Playfair Display', serif; /* ваш заголовочный шрифт */
   font-size: 3rem;                        /* крупный размер */
   color: #006400;                         /* темно-зеленый */
   font-weight: 700;                       /* максимально жирный */
-  margin-bottom: 1rem;
-  margin-top: 0 !important;                     /* или 0, если нужно совсем вплотную */
+  margin-bottom: 2rem;                    /* большое расстояние на ПК */
+  margin-top: 0 !important;               /* или 0, если нужно совсем вплотную */
 }
 
 section, .py-5 {
@@ -31,11 +39,11 @@ section, .py-5 {
 h3.section-subheading {
   font-family: 'Montserrat', sans-serif; /* жирный геометрический гротеск */
   font-weight: 700;                     /* максимальный вес */
-  font-size: 1.2rem;                      /* тот же размер, что и раньше */
+  font-size: 1.1rem;                      /* тот же размер, что и раньше */
   color: #006400;                       /* темно-зелёный */
   text-transform: uppercase;            /* все буквы заглавные */
   letter-spacing: 0.02em;               /* небольшие межбуквенные интервалы */
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 h4.section-subheading {
@@ -74,12 +82,6 @@ p {
 
 }
 
-@media (max-width: 991.98px) {
-  .section-subheading {
-    font-size: 1.1rem;
-  }
-}
-
 img, video {
   border-radius: 16px;
   box-shadow: 0 4px 24px 0 rgba(0,0,0,0.13), 0 1.5px 5px 0 rgba(0,0,0,0.09);
@@ -93,66 +95,36 @@ img.no-shadow {
 }
 
 @media (max-width: 575px) {
-  h2.section-title { font-size: 2.2rem; }
+  h2.section-title { font-size: 2.2rem;
+  margin-bottom: 1.2rem; 
+  }
   h3.section-subheading { font-size: 1rem; }
   p { font-size: 1.1rem; }
   #news img { width: 100% !important; height: auto !important; }
+  #news .row > .col-12:first-child img {
+    width: 60% !important;      /* измените по желанию (например, 60%) */
+    max-width: 220px;           /* чтобы не была слишком широкой */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
+  @media (max-width: 575px) {
+  h2.section-title:not(.news-main) {
+    margin-bottom: 1.2rem !important;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 991.98px) {
+  .section-subheading {
+    font-size: 1.1rem;
+  }
+  .section-title {
+    margin-bottom: 3rem;
+  }
+  h2.section-title:not(.news-main) {
+    margin-bottom: 4rem !important;
+  }
+}
 
