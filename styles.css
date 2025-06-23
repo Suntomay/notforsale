@@ -251,6 +251,14 @@ img.no-shadow {
   text-decoration: underline;
 }
 
+#projects-page .section-subheading {
+  font-family: 'Playfair Display', serif; /* такой же заголовочный шрифт */
+  color: #006400;                         /* тот же темно-зеленый */
+  font-weight: 700;                       /* такой же жирный */
+  font-size: 2.25rem;                     /* например, чуть меньше 3rem */
+  margin-bottom: 3rem;                    /* отступ снизу */
+}
+
 @media (max-width: 575px) {
   h2.section-title { font-size: 2.2rem;
   margin-bottom: 1.2rem; 
