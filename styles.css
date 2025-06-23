@@ -272,6 +272,36 @@ img.no-shadow {
   display: block;    /* чтобы убрать лишние отступы */
 }
 
+/* --- Для страницы Projects --- */
+#projects-page {
+  /* отодвинем весь блок чуть ниже, если нужно */
+  padding-top: 4rem; /* можно подкорректировать */
+}
+
+/* Заголовок Projects (h2) */
+#projects-page h2.section-title {
+  font-size: 3.5rem;      /* чуть больше, чем 3rem по умолчанию */
+  margin-top: 5rem;       /* увеличенный отступ сверху */
+  margin-bottom: 2rem;    /* сбалансируем отступ снизу */
+}
+
+/* Подзаголовок Flight sponsors (h3) */
+#projects-page h3.section-subheading {
+  font-size: 2.25rem;     /* оставляем меньше, чем у h2 */
+  margin-bottom: 3rem;    /* отступ снизу, как было */
+}
+
+#projects-page .gallery-card img {
+  width: 100%!important;
+  height: auto!important;
+  display: block;
+}
+/* По желанию: задайте max-width, чтобы не было слишком растянуто */
+#projects-page .gallery-card {
+  max-width: 800px; /* например */
+  margin: 0 auto;   /* центрируем */
+}
+
 @media (max-width: 575px) {
   h2.section-title { font-size: 2.2rem;
   margin-bottom: 1.2rem; 
