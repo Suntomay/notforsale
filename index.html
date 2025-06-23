@@ -6,10 +6,10 @@
   <title>NotForSale</title>
   <!-- 1. Bootstrap CSS -->
   <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-    crossorigin="anonymous">
+   href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" 
+  rel="stylesheet" 
+  integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" 
+  crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" 
     rel="stylesheet">
   <!-- 2. Собственные стили -->
@@ -21,35 +21,32 @@
     <div class="container">
       <div class="row align-items-center">
         <!-- Логотип -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <a href="/">
+        <div class="col-12 col-sm-6 col-lg-3 d-flex align-items-center">
+          <a href="/" class="me-3">
             <img
               src="https://www.notforsale.at/wp-content/themes/not-for-sale-main/assets/img/Logo-Hero.png"
               alt="logo NotForSale"
-              class="img-fluid no-shadow">
+              class="no-shadow site-logo">
           </a>
         </div>
         <!-- Навигация -->
-        <div class="col-12 col-sm-6 col-lg-9">
-          <div class="contact-info text-center text-sm-end mb-3">
-            <p class="mb-1">
-            write us a mail:&nbsp; 
-              <a href="mailto:office@notforsale.at" class="link-mail">office@notforsale.at</a>
-            </p>
-            <p class="mb-0">
-            and follow us on Instagram: &nbsp;
-              <a href="https://instagram.com/notforsalevision" target="_blank" class="link-ig">@notforsalevision</a>
-            </p>
-          </div>
-          <nav class="navbar navbar-expand-sm navbar-light bg-white">
-            <div class="container">
-              <!-- Логотип или заголовок -->
-              <a class="navbar-brand" href="https://www.notforsale.at/wp-content/themes/not-for-sale-main/assets/img/logo_quer.png">
-               <img src="images/logo_quer.png" 
-               alt="NotForSale Logo" 
-               height="40"
-               class="no-shadow">
-              </a>
+        <div class="col-12 col-sm-6 col-lg-9 d-flex flex-column align-items-end">
+        <!-- 1) Контакты, прижаты к верху и вправо -->
+        <div class="contact-info mb-3 text-end">
+          <p class="mb-1">
+            write us a mail:
+            <a href="mailto:office@notforsale.at" class="link-mail">
+             office@notforsale.at
+            </a>
+          </p>
+          <p class="mb-0">
+             and follow us on Instagram:
+            <a href="https://instagram.com/notforsalevision" class="link-ig">
+             @notforsalevision
+             </a>
+          </p>
+        </div>
+          <nav class="navbar navbar-expand-sm navbar-light">
             <button
               class="navbar-toggler ms-auto"
               type="button"
@@ -65,9 +62,7 @@
                 <li class="nav-item">
                  <a 
                   class="nav-link" 
-                  href="projects.html"         
-                  target="_blank"              
-                  rel="noopener noreferrer">Projects</a>
+                  href="projects.html">Projects</a>
                </li>
                 <li class="nav-item">
                   <a class="nav-link" href="https://www.notforsale.at/mitmachen/">Join us</a>
@@ -83,7 +78,8 @@
     </div>
   </header>
 <!-- Новости -->
-  <div class="container text-center my-5">
+ <main>
+  <div id="news" class="container text-center my-5">
     <h2 class="section-title news-main">NEWS</h2>
   </div>
   <section id="biodiversity-day" class="py-5"> 
@@ -151,14 +147,14 @@
   <div class="container">
     <h2 class="section-title text-center mb-4">Adopt a Dog Day</h2>
     <div class="row align-items-stretch g-4">
-      <div class="col-12 col-md-6 d-flex flex-column justify-content-end text-start adopt-text-col">
+      <div class="col-12 col-md-6 d-flex flex-column justify-content-end text-start">
         <p class="mb-0">
           We thank you for choosing to adopt and for being a part of our mission to help every dog find a loving home.
           You are not just rescuing an animal, you are giving a beautiful soul a second chance at life.
         </p>
       </div>
       <div class="col-12 col-md-6 d-flex justify-content-center">
-        <div class="media-wrapper w-100 media-adopt-height">
+        <div class="media-wrapper w-100">
           <img
             src="https://www.notforsale.at/wp-content/uploads/2024/09/Strassenhund_tierschutz-1536x1086.jpg"
             alt="Street dog for adoption"
@@ -189,42 +185,42 @@
 
     <div class="row shelter-gallery gx-4 gy-4">
       <!-- Карточка 1 -->
-      <div class="col-6 col-md-4">
+      <div class="col-12 col-sm-6 col-md-4">
         <div class="gallery-card">
           <img src="images/blueboy3-768x1024.jpeg" 
           alt="blue eyes dog">
         </div>
       </div>
       <!-- Карточка 2 -->
-      <div class="col-6 col-md-4">
+      <div class="col-12 col-sm-6 col-md-4">
         <div class="gallery-card">
           <img src="images/corinna-768x1024.jpg" 
           alt="Chihuahua">
         </div>
       </div>
       <!-- Карточка 3 -->
-      <div class="col-6 col-md-4">
+      <div class="col-12 col-sm-6 col-md-4">
         <div class="gallery-card">
           <img src="images/jagdhundmix-768x1024.jpeg" 
           alt="spotted dog">
         </div>
       </div>
       <!-- Карточка 4 -->
-      <div class="col-6 col-md-4">
+      <div class="col-12 col-sm-6 col-md-4">
         <div class="gallery-card">
           <img src="images/WelpenWasserHerdenhund3-1024x768.jpeg" 
           alt="dog with puppies bathing">
         </div>
         </div>
         <!-- Карточка 5 -->
-      <div class="col-6 col-md-4">
+      <div class="col-12 col-sm-6 col-md-4">
         <div class="gallery-card">
           <img src="images/Herdenschutzhundmix1-300x225.jpeg" 
           alt="light-coated puppy">
         </div>
         </div>
         <!-- Карточка 6 -->
-          <div class="col-6 col-md-4">
+          <div class="col-12 col-sm-6 col-md-4">
         <div class="gallery-card">
           <img src="images/Katzenbabyrot-768x1024.jpeg" 
           alt="ginger kitten">
@@ -314,6 +310,7 @@
     </div>
   </div>
 </section>
+</main>
 
 <footer class="site-footer">
   <div class="container text-center py-4">
@@ -333,8 +330,8 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous">
+integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" 
+crossorigin="anonymous">
 </script>
 </body>
 </html>

@@ -78,10 +78,6 @@ p {
   object-fit: contain;
 }
 
-@media (max-width: 768px) {
-
-}
-
 img, video {
   border-radius: 16px;
   box-shadow: 0 4px 24px 0 rgba(0,0,0,0.13), 0 1.5px 5px 0 rgba(0,0,0,0.09);
@@ -95,7 +91,7 @@ img.no-shadow {
 }
 
 .contact-info {
-  font-size: 0.5rem;              /* вместо 1.25rem или 1.125rem */
+  font-size: 0.8rem;              /* вместо 1.25rem или 1.125rem */
   color: #000;              /* оставляем тёмно-зелёный для не-ссылочного текста */
   margin-bottom: 0.5rem;
 }
@@ -124,10 +120,6 @@ img.no-shadow {
 .contact-info p,
 .contact-info a {
   font-size: 0.8rem !important;   /* ~12px — вместо 0.875rem (14px) */
-}
-
-.shelter-gallery {
-    /* ничего не нужно, пробелы даёт Bootstrap */
 }
 
 .gallery-card {
@@ -259,13 +251,41 @@ img.no-shadow {
   margin-bottom: 3rem;                    /* отступ снизу */
 }
 
+#projects-page h3.section-subheading {
+  /* берём тот же шрифт и цвет, что у h2.section-title */
+  font-family: 'Playfair Display', serif !important;
+  color: #006400         !important;
+  font-weight: 700       !important;
+  /* чуть меньше, чем 3rem у .section-title */
+  font-size: 2.25rem     !important;
+  /* отменяем uppercase и межбуквенный интервал */
+  text-transform: none   !important;
+  letter-spacing: 0      !important;
+  /* сохраняем отступ снизу */
+  margin-bottom: 3rem    !important;
+}
+
+/* Ограничиваем ширину главного логотипа */
+.site-logo {
+  max-width: 200px;  /* подберите своё значение */
+  height: auto;
+  display: block;    /* чтобы убрать лишние отступы */
+}
+
 @media (max-width: 575px) {
   h2.section-title { font-size: 2.2rem;
   margin-bottom: 1.2rem; 
   }
-  h3.section-subheading { font-size: 1rem; }
-  p { font-size: 1.1rem; }
-  #news img { width: 100% !important; height: auto !important; }
+  h3.section-subheading { 
+    font-size: 1rem; 
+  }
+  p { 
+    font-size: 1.1rem; 
+  }
+  #news img { 
+    width: 100% !important; 
+    height: auto !important; 
+  }
   #news .row > .col-12:first-child img {
     width: 60% !important;      /* измените по желанию (например, 60%) */
     max-width: 220px;           /* чтобы не была слишком широкой */
