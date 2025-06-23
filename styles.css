@@ -116,7 +116,7 @@ img.no-shadow {
 /* 3) При наведении/фокусе — чуть светлее */
 .contact-info a:hover,
 .contact-info a:focus {
-  color: #008000;               /* светло-зелёный оттенок */
+  color: #00FF00;               /* светло-зелёный оттенок */
   text-decoration: underline;
 }
 
@@ -124,6 +124,32 @@ img.no-shadow {
 .contact-info p,
 .contact-info a {
   font-size: 0.8rem !important;   /* ~12px — вместо 0.875rem (14px) */
+}
+
+.shelter-gallery {
+    /* ничего не нужно, пробелы даёт Bootstrap */
+}
+
+/* 1) Карточка-обёртка, фиксируем соотношение 4:5 (или любое) */
+.gallery-card {
+  width: 100%;
+  height: 200px;              /* фиксированная высота всех карточек */
+  overflow: hidden;
+  border-radius: 0.75rem;     /* скругление */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* обрезает изображение по краям под размер */
+  display: block;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 @media (max-width: 575px) {
