@@ -1,3 +1,24 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: 
+    url('./font/Montserrat-Bold.woff2') format('woff2'),
+    url('./font/Montserrat-Bold.woff')  format('woff');
+}
+
+/* локальное подключение Playfair Display Bold (700) */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: 
+    url('./font/PlayfairDisplay-Bold.woff2') format('woff2'),
+    url('./font/PlayfairDisplay-Bold.woff')    format('woff');
+}
+
 .navbar-nav .nav-link {
   font-size: 1.125rem;     /* 18px */
   color: #006400 !important;/* тёмно-зелёный */
