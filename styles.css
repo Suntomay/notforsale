@@ -286,17 +286,15 @@ img.no-shadow {
   margin-bottom: 3rem    !important;
 }
 
+#projects-page .gallery-card {
+  aspect-ratio: auto !important;
+}
+
 /* Ограничиваем ширину главного логотипа */
 .site-logo {
   max-width: 200px;  /* подберите своё значение */
   height: auto;
   display: block;    /* чтобы убрать лишние отступы */
-}
-
-/* --- Для страницы Projects --- */
-#projects-page {
-  /* отодвинем весь блок чуть ниже, если нужно */
-  padding-top: 4rem; /* можно подкорректировать */
 }
 
 /* Заголовок Projects (h2) */
@@ -312,15 +310,23 @@ img.no-shadow {
   margin-bottom: 3rem;    /* отступ снизу, как было */
 }
 
-#projects-page .gallery-card img {
-  width: 100%!important;
-  height: auto!important;
-  display: block;
+#projects-page .gallery-card {
+  aspect-ratio: auto !important;
 }
+
+#projects-page .gallery-card img {
+  position: static !important;
+  inset: auto !important;
+  width: 100%   !important;
+  height: auto  !important;
+  display: block!important;
+}
+
 /* По желанию: задайте max-width, чтобы не было слишком растянуто */
 #projects-page .gallery-card {
   max-width: 800px; /* например */
   margin: 0 auto;   /* центрируем */
+  aspect-ratio: unset; /* убираем заданное соотношение сторон */
 }
 
 @media (max-width: 575px) {
