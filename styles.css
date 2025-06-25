@@ -329,6 +329,17 @@ img.no-shadow {
   aspect-ratio: unset; /* убираем заданное соотношение сторон */
 }
 
+#projects-page h3.section-subheading.gallery-subheading {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 700                           !important;
+  font-size:   1.1rem                        !important; /* тот же размер, что и в index */
+  color:       #006400                       !important;
+  text-transform: uppercase                  !important;
+  letter-spacing: 0.02em                     !important;
+  margin-top:    3rem                        !important; /* увеличенный зазор от картинки */
+  margin-bottom: 0.5rem                      !important; /* как mb-3 у других h3 */
+}
+
 @media (max-width: 575px) {
   h2.section-title { font-size: 2.2rem;
   margin-bottom: 1.2rem; 
