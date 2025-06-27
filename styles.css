@@ -264,14 +264,6 @@ img.no-shadow {
   text-decoration: underline;
 }
 
-#projects-page .section-subheading {
-  font-family: 'Playfair Display', serif; /* такой же заголовочный шрифт */
-  color: #006400;                         /* тот же темно-зеленый */
-  font-weight: 700;                       /* такой же жирный */
-  font-size: 2.25rem;                     /* например, чуть меньше 3rem */
-  margin-bottom: 3rem;                    /* отступ снизу */
-}
-
 #projects-page h3.section-subheading {
   /* берём тот же шрифт и цвет, что у h2.section-title */
   font-family: 'Playfair Display', serif !important;
