@@ -340,6 +340,10 @@ img.no-shadow {
   transition: none     !important;
 }
 
+strong {
+  color: #004d00;
+}
+
 
 @media (max-width: 575px) {
   h2.section-title { font-size: 2.2rem;
