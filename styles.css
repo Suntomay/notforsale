@@ -332,6 +332,15 @@ img.no-shadow {
   margin-bottom: 2rem                      !important; /* как mb-3 у других h3 */
 }
 
+/* Отключаем hover-эффект у карточек с классом no-hover */
+.gallery-card.no-hover,
+.gallery-card.no-hover:hover {
+  transform: none      !important;
+  box-shadow: none     !important;
+  transition: none     !important;
+}
+
+
 @media (max-width: 575px) {
   h2.section-title { font-size: 2.2rem;
   margin-bottom: 1.2rem; 
