@@ -19,20 +19,6 @@
     url('./font/PlayfairDisplay-Bold.woff')    format('woff');
 }
 
-/* ❶ Размеры контейнера под логотип */
-.brand-logo {
-  display: block;               /* чтобы можно было задать размеры */
-  width: 200px;                 /* ширина логотипа */
-  height: 222px;                 /* высота логотипа */
-  /* ❷ Фоновое изображение */
-  background-image: url("/images/Logo-Hero.avif");
-  background-repeat: no-repeat;
-  background-position: center;  /* выравнивание по центру */
-  background-size: contain;     /* чтобы картинка вписалась в контейнер */
-  /* fallback для браузеров без AVIF */
-  background-image: url("/images/Logo-Hero.png");
-}
-
 .navbar-nav .nav-link {
   font-size: 1.125rem;     /* 18px */
   color: #006400 !important;/* тёмно-зелёный */
