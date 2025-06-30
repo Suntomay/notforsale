@@ -28,7 +28,7 @@
 /* 2. Цвет при наведении */
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus {
-  color: #004d00 !important;
+  color: #009900 !important;
 }
 
 /* 3. Отступ между пунктами */
@@ -133,7 +133,7 @@ img.no-shadow {
 /* 3) При наведении/фокусе — чуть светлее */
 .contact-info a:hover,
 .contact-info a:focus {
-  color: #00FF00;               /* светло-зелёный оттенок */
+  color: #009900;               /* светло-зелёный оттенок */
   text-decoration: underline;
 }
 
@@ -260,7 +260,7 @@ img.no-shadow {
 }
 
 .site-footer .contact-info:hover {
-  color: #38c759;               /* чуть светлее при наведении */
+  color: #009900;               /* чуть светлее при наведении */
   text-decoration: underline;
 }
 
