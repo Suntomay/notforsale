@@ -30,7 +30,7 @@
   background-position: center;  /* выравнивание по центру */
   background-size: contain;     /* чтобы картинка вписалась в контейнер */
   /* fallback для браузеров без AVIF */
-  background-image: url("../images/Logo-Hero.png");
+  background-image: url("/images/Logo-Hero.png");
 }
 
 .navbar-nav .nav-link {
