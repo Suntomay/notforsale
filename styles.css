@@ -340,8 +340,20 @@ img.no-shadow {
   transition: none     !important;
 }
 
+.gallery-card.no-hover {
+  max-width: 400px;
+}
+
 strong {
   color: #004d00;
+}
+
+.small-card {
+  max-width: 400px;
+}
+
+.site-logo-mobile {
+  height: 40px;
 }
 
 
@@ -371,13 +383,14 @@ strong {
   .contact-info a {
     font-size: 0.7rem !important;  /* ~11px */
   }
-}
-
-  @media (max-width: 575px) {
-  h2.section-title:not(.news-main) {
+    .site-logo-mobile {
+    height: 30px;
+  }
+    h2.section-title:not(.news-main) {
     margin-bottom: 1.2rem !important;
   }
 }
+
 
 @media (max-width: 991.98px) {
   .section-subheading {

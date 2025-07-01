@@ -19,9 +19,8 @@
             <img
               src="images/logo_quer.png"
               alt="NotForSale Logo"
-              class="no-shadow"
-              loading="lazy"
-              height="40">
+              class="site-logo-mobile no-shadow"
+              loading="lazy">
         </div>
                 <!-- Навигация справа -->
      <div class="col-6 col-sm-8 col-lg-9">
@@ -39,13 +38,19 @@
             <div class="collapse navbar-collapse" id="mainNav">
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home</a>
+                  <a class="nav-link" 
+                  href="index.html"
+                  title="Home"
+                  aria-label="Home">
+                  <span class="visually-hidden">Home</span>
+                  </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active"
                   href="projects.html"
                   aria-current="page">
-                  Projects</span>
+                  Projects
+                  </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="https://www.notforsale.at/mitmachen/">Join us</a>
@@ -156,7 +161,7 @@
      </div>
        <!-- Правая колонка: первая картинка -->
     <div class="col-12 col-md-6 d-flex justify-content-center">
-     <div class="gallery-card no-hover" style="max-width: 400px;">
+     <div class="gallery-card no-hover small-card">
        <img
          src="images/93804860.webp"
          alt=""
@@ -170,7 +175,7 @@
      <!-- На mobile картинка будет второй (order-2), на md+ первой (order-md-1) -->
      <div class="col-12 col-md-6 d-flex justify-content-center 
                 order-2 order-md-1">
-      <div class="gallery-card no-hover" style="max-width: 400px;">
+      <div class="gallery-card no-hover small-card">
         <img
           src="images/charming-hand-drawn-dog-with-minimalist-shapes-muted-accent-colors-white-background_1288058-2659.jpg"         
           alt=""
@@ -217,7 +222,7 @@
      </div>
     <!-- Блок 2: картинка (станет справа) -->
     <div class="col-12 col-md-6 d-flex justify-content-center">
-      <div class="gallery-card no-hover" style="max-width: 400px;">
+      <div class="gallery-card no-hover small-card">
         <img
           src="images/dog-with-butterfly-line-drawing-vector-illustration-700-268139676.jpg"
           alt=""
