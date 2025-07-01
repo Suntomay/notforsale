@@ -297,11 +297,8 @@ p {
   margin-bottom: 3rem;    /* отступ снизу, как было */
 }
 
-#projects-page .gallery-card {
-  aspect-ratio: auto !important;
-}
-
 #projects-page .gallery-card img {
+  object-fit: contain;
   position: static !important;
   inset: auto !important;
   width: 100%   !important;
