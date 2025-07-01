@@ -16,20 +16,18 @@
       <div class="row align-items-center">
         <!-- Логотип слева -->
         <div class="col-6 col-sm-4 col-lg-3">
-          <a href="index.html">
             <img
               src="images/logo_quer.png"
               alt="NotForSale Logo"
               class="no-shadow"
-              height="40"
-              href="index.html" />
-          </a>
+              loading="lazy"
+              height="40">
         </div>
                 <!-- Навигация справа -->
      <div class="col-6 col-sm-8 col-lg-9">
           <nav class="navbar navbar-expand-sm navbar-light">
             <button
-              class="navbar-toggler ms-auto"
+              class="navbar-toggler ms-auto d-block d-sm-none"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#mainNav"
@@ -41,7 +39,13 @@
             <div class="collapse navbar-collapse" id="mainNav">
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                  <a class="nav-link">Projects</a>
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active"
+                  href="projects.html"
+                  aria-current="page">
+                  Projects</span>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="https://www.notforsale.at/mitmachen/">Join us</a>
@@ -71,6 +75,7 @@
        <img
          src="images/Minimal-Square-Photo-Collage-Photography-Instagram-Post1-1024x1024.png"
          alt="Photo collage"
+         loading="lazy"
         >
       </div>
            <!-- Стало: заголовок под картинкой -->
@@ -121,60 +126,153 @@
         become part of this inspiring journey and create an oasis of care 
         and joy that will last for generations.</p>
      </div>
-
-     <h3 class="section-subheading text-center mb-5">From shelter dog to service dog</h3>
+     <h3 class="section-subheading mb-3 gallery-subheading">From shelter dog to service dog</h3>
       <!-- Центрированный плакат под заголовком -->
-      <div class="gallery-card my-4 mx-auto">
+      <div class="my-4 text-center">
        <img
         src="images/Plakat-Butlerdog2-1024x724.jpg"
        alt="From shelter dog to service dog"
-        class="img-fluid d-block mx-auto rounded shadow">
+        class="img-fluid d-block mx-auto rounded shadow"
+        loading="lazy">
       </div>
-      <!-- Наши цели -->
-      <div class="row align-items-stretch g-4">
-       <div class="col-12 col-md-6 d-flex flex-column justify-content-end text-start">
-        <h3 class="section-subheading mb-3 reset-subheading">
-          Our goal with “Not For Sale”
-        </h3>
-        <!-- Новый параграф под заголовком -->
-          <div class="text-start">
-            <p>
-             At the "Not For Sale" Foundation, 
-             it is our heartfelt mission to offer 
-             rescued dogs a new perspective. 
-             We want to provide them with thorough 
-             training so they can find a loving, safe, 
-             and meaningful place in our society. 
-             These dogs deserve not only a home, 
-             but also a purpose that fulfills them and brings them joy.
-            </p>
-          </div>
-          <!-- Новый заголовок следующей секции -->
-           <h3 class="section-subheading mb-3 reset-subheading">
-            A win-win situation for dog and human
-          </h3>
-       </div>
-       <div class="col-12 col-md-6">
+      <!-- Левая колонка: заголовок и текст -->
+    <div class="row align-items-start g-4 mt-5">
+     <div class="col-12 col-md-6 d-flex flex-column justify-content-end text-start">
+       <h3 class="section-subheading mb-3">
+         Our goal with “Not For Sale”
+       </h3>
 
-       </div>
+       <p>
+         At the <strong>"Not For Sale"</strong> Foundation, 
+         it is our heartfelt mission to offer 
+         rescued dogs a new perspective. 
+         We want to provide them with thorough 
+         training so they can find a loving, safe, 
+         and meaningful place in our society. 
+         These dogs deserve not only a home, 
+         but also a purpose that fulfills them and 
+         brings them joy.
+       </p>
+     </div>
+       <!-- Правая колонка: первая картинка -->
+    <div class="col-12 col-md-6 d-flex justify-content-center">
+     <div class="gallery-card no-hover" style="max-width: 400px;">
+       <img
+         src="images/93804860.webp"
+         alt=""
+         loading="lazy"
+         class="w-100 h-auto">
+     </div>
+   </div>
+  </div>
+     <!-- === New Section: A win-win situation for dog and human === -->
+     <div class="row align-items-start g-4 mt-5">
+     <!-- На mobile картинка будет второй (order-2), на md+ первой (order-md-1) -->
+     <div class="col-12 col-md-6 d-flex justify-content-center 
+                order-2 order-md-1">
+      <div class="gallery-card no-hover" style="max-width: 400px;">
+        <img
+          src="images/charming-hand-drawn-dog-with-minimalist-shapes-muted-accent-colors-white-background_1288058-2659.jpg"         
+          alt=""
+          loading="lazy"
+          class="w-100 h-auto">
       </div>
-     
+    </div>
+     <!-- На mobile текст будет первым (order-1), на md+ вторым (order-md-2) -->
+     <div class="col-12 col-md-6 d-flex flex-column justify-content-end text-start
+               order-1 order-md-2">
+       <h3 class="section-subheading mb-3">
+         A win-win situation for dog and human
+       </h3>
+       <p>
+         However, our mission goes beyond training dogs. 
+         We also want to help animal-loving people who n
+         eed assistance in their daily lives. Whether it's 
+         bringing a water bottle, flicking a light switch, 
+         or opening a door – our trained dogs are ready to 
+         serve as loving and loyal everyday helpers. This 
+         synergy between humans and animals brings joy and 
+         relief to the daily lives of both parties and fosters 
+         a deeper bond.
+       </p>
+    </div>
+     </div>
+     <div class="row align-items-start g-4 mt-5">
+    <!-- Блок 1: текст (станет слева) -->
+    <div class="col-12 col-md-6 d-flex flex-column justify-content-end text-start">
+      <h3 class="section-subheading mb-3">
+        The work of Melanie Juriga
+      </h3>
+       <p>
+         Melanie Juriga, our animal welfare-certified dog trainer, 
+         has made it her mission not only to give dogs a 
+         purpose in life, but also to bring light into the 
+         lives of those who need their help. She places 
+         lovingly trained four-legged friends with people in need, 
+         for whom everyday tasks like taking off socks, 
+         turning lights on and off, bringing a cell phone 
+         or remote control, and picking up dropped objects 
+         often pose significant challenges.
+       </p>
+     </div>
+    <!-- Блок 2: картинка (станет справа) -->
+    <div class="col-12 col-md-6 d-flex justify-content-center">
+      <div class="gallery-card no-hover" style="max-width: 400px;">
+        <img
+          src="images/dog-with-butterfly-line-drawing-vector-illustration-700-268139676.jpg"
+          alt=""
+          loading="lazy"
+         class="w-100 h-auto">
+      </div>
+    </div>
+   </div>
+   <!-- === New Section: Why we do this === -->
+<div class="row align-items-start g-4 mt-5">
+    <!-- левая колонка: картинка -->
+  <div class="col-12 col-md-6 d-flex justify-content-center">
+    <img
+      src="images/minimalist-brown-dog-silhouette_53876-350402.avif"
+      alt=""
+      loading="lazy"
+      class="w-100 h-auto no-shadow">
+  </div>
+  <!-- Правая колонка: заголовок и текст -->
+  <div class="col-12 col-md-6 d-flex flex-column justify-content-end text-start">
+    <h3 class="section-subheading mb-3">
+      Why we do this
+    </h3>
+    <p>
+      At <strong>Not For Sale</strong>, we firmly believe that 
+      every dog every person deserves a chance 
+      at a better life. Through our work, we aim to ensure 
+      that dogs don't just survive, but truly live—in 
+      an environment that offers them safety, love, 
+      and a meaningful purpose. At the same time, 
+      we want to give people in need the opportunity 
+      to receive support from a loyal and highly trained 
+      four-legged friend. In this way, we create a special 
+      bond that enriches the lives of both parties.
+    </p>
+  </div>
+</div>
 
-
+     </div>
+    </div>
+  </main>
   
 
   <!-- ======= Футер ======= -->
 <footer class="site-footer">
   <div class="container text-center py-4">
     <h2 class="footer-title mb-3">Contact</h2>
-    <adress class="mb-0">
+    <address class="mb-0">
       NOT FOR SALE<br>
       Gemeinnützige Privatstiftung<br>
       2340 Mödling<br>
       Hauptstraße 47/23
       <a href="mailto:office@notforsale.at" class="contact-info">
         office@notforsale.at</a>
-    </adress>
+    </address>
   </div>
 </footer>
 
