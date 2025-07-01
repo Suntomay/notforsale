@@ -99,16 +99,8 @@ p {
   object-fit: contain;
 }
 
-img, video {
-  border-radius: 16px;
-  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.13), 0 1.5px 5px 0 rgba(0,0,0,0.09);
-  background: #fff;
-}
-
-img.no-shadow {
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  background: none !important;
+.with-shadow {
+  box-shadow: 0 0 5px gray;
 }
 
 .contact-info {
@@ -151,6 +143,8 @@ img.no-shadow {
   border-radius: 0.75rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform .3s, box-shadow .3s;
+  max-width: 400px;
+  height: 400px;
 }
 
 .gallery-card img {
@@ -159,6 +153,7 @@ img.no-shadow {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  max-width: 100%;
 }
 
 .gallery-card:hover {
@@ -346,10 +341,6 @@ img.no-shadow {
 
 strong {
   color: #004d00;
-}
-
-.small-card {
-  max-width: 400px;
 }
 
 .site-logo-mobile {
