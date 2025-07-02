@@ -40,7 +40,7 @@
   margin-bottom: 7rem;
 }
 
-h2.section-title:not(.news-main) {
+h1.section-title:not(.news-main) {
   margin-bottom: 6rem !important;
 }
 
@@ -99,8 +99,13 @@ p {
   object-fit: contain;
 }
 
-.with-shadow {
-  box-shadow: 0 0 5px gray;
+.shadow-effect {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: box-shadow 0.3s;
+}
+
+.shadow-effect:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* тень чуть сильнее при наведении */
 }
 
 .contact-info {
@@ -141,7 +146,6 @@ p {
   aspect-ratio: 4 / 5;       /* вместо фиксированной высоты */
   overflow: hidden;
   border-radius: 0.75rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform .3s, box-shadow .3s;
   max-width: 400px;
   height: 400px;
@@ -156,11 +160,6 @@ p {
   max-width: 100%;
 }
 
-.gallery-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
 #lena-story {
   background-color: #f9f9f9; /* лёгкий фон по желанию */
   border-radius: 0.5rem;
@@ -169,7 +168,6 @@ p {
 #lena-story .story-image {
   max-width: 100%;
   height: auto;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* Заголовок секции чуть уже по отступам */
@@ -195,7 +193,6 @@ p {
 #maxima-story .story-image {
   max-width: 100%;
   height: auto;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 #maxima-story .section-title {
@@ -218,7 +215,6 @@ p {
 #phoebe-story .story-image {
   max-width: 100%;
   height: auto;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 #phoebe-story .section-title {
@@ -259,8 +255,7 @@ p {
   text-decoration: underline;
 }
 
-#projects-page h3.section-subheading {
-  /* берём тот же шрифт и цвет, что у h2.section-title */
+#projects-page h2.section-subheading {
   font-family: 'Playfair Display', serif !important;
   color: #006400         !important;
   font-weight: 700       !important;
@@ -271,6 +266,7 @@ p {
   letter-spacing: 0      !important;
   /* сохраняем отступ снизу */
   margin-bottom: 3rem    !important;
+  font-size: 2.25rem;     /* оставляем меньше, чем у h2 */
 }
 
 #projects-page .gallery-card {
@@ -284,17 +280,11 @@ p {
   display: block;    /* чтобы убрать лишние отступы */
 }
 
-/* Заголовок Projects (h2) */
-#projects-page h2.section-title {
+/* Заголовок Projects (h1) */
+#projects-page h1.section-title {
   font-size: 3.5rem;      /* чуть больше, чем 3rem по умолчанию */
   margin-top: 5rem;       /* увеличенный отступ сверху */
   margin-bottom: 2rem;    /* сбалансируем отступ снизу */
-}
-
-/* Подзаголовок Flight sponsors (h3) */
-#projects-page h3.section-subheading {
-  font-size: 2.25rem;     /* оставляем меньше, чем у h2 */
-  margin-bottom: 3rem;    /* отступ снизу, как было */
 }
 
 #projects-page .gallery-card img {
@@ -324,18 +314,6 @@ p {
   margin-bottom: 2rem                      !important; /* как mb-3 у других h3 */
 }
 
-/* Отключаем hover-эффект у карточек с классом no-hover */
-.gallery-card.no-hover,
-.gallery-card.no-hover:hover {
-  transform: none      !important;
-  box-shadow: none     !important;
-  transition: none     !important;
-}
-
-.gallery-card.no-hover {
-  max-width: 400px;
-}
-
 strong {
   color: #004d00;
 }
@@ -346,7 +324,7 @@ strong {
 
 
 @media (max-width: 575px) {
-  h2.section-title { font-size: 2.2rem;
+  h1.section-title { font-size: 2.2rem;
   margin-bottom: 1.2rem; 
   }
   h3.section-subheading { 
@@ -374,7 +352,7 @@ strong {
     .site-logo-mobile {
     height: 30px;
   }
-    h2.section-title:not(.news-main) {
+    h3.section-title:not(.news-main) {
     margin-bottom: 1.2rem !important;
   }
 }
@@ -387,7 +365,7 @@ strong {
   .section-title {
     margin-bottom: 3rem;
   }
-  h2.section-title:not(.news-main) {
+  h3.section-title:not(.news-main) {
     margin-bottom: 4rem !important;
   }
 }
