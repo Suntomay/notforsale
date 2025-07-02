@@ -146,7 +146,6 @@ p {
   aspect-ratio: 4 / 5;       /* вместо фиксированной высоты */
   overflow: hidden;
   border-radius: 0.75rem;
-  transition: transform .3s, box-shadow .3s;
   max-width: 400px;
   height: 400px;
 }
@@ -282,9 +281,9 @@ p {
 
 /* Заголовок Projects (h1) */
 #projects-page h1.section-title {
-  font-size: 3.5rem;      /* чуть больше, чем 3rem по умолчанию */
-  margin-top: 5rem;       /* увеличенный отступ сверху */
-  margin-bottom: 2rem;    /* сбалансируем отступ снизу */
+  font-size: 3.5rem;
+  margin-top: 5rem !important;
+  margin-bottom: 2rem;
 }
 
 #projects-page .gallery-card img {
@@ -301,6 +300,20 @@ p {
   max-width: 800px; /* например */
   margin: 0 auto;   /* центрируем */
   aspect-ratio: unset; /* убираем заданное соотношение сторон */
+}
+
+/* 300×300 px для всех project-img, картинка впишется внутри */
+#projects-page .gallery-card.project-img {
+  width: 300px;
+  height: 300px;
+  max-width: none;  /* отменяем предыдущие max-width */
+}
+#projects-page .gallery-card.project-img img {
+  position: absolute;  /* восстанавливаем режим cover */
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #projects-page h3.section-subheading.gallery-subheading {
