@@ -346,6 +346,12 @@ strong {
   height: auto;
 }
 
+/*  Сделала ряды под секциями уже и центрировала их */
+#projects-page .narrow-row {
+  max-width: 800px;    /* здесь задаю желаемую общую ширину блока */
+  margin: 0 auto;      /* центрирование по горизонтали */
+}
+
 
 @media (max-width: 575px) {
   h1.section-title { font-size: 2.2rem;
