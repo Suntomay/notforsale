@@ -350,12 +350,6 @@ strong {
   margin-bottom: 1rem !important;  /* подберите значение под себя */
 }
 
-/* По умолчанию — десктоп: обёртка растягивается по содержимому (видео во всю ширину колонки) */
-.video-wrapper {
-  width: auto;
-  margin: 0 auto; /* чтобы центрировалась при меньшей ширине */
-}
-
 @media (max-width: 767.98px) {
   h1.section-title { font-size: 2.2rem;
   margin-bottom: 1.2rem; 
@@ -397,6 +391,11 @@ strong {
   .navbar-nav .nav-link {
     font-size: 1.25rem;         /* чуть больше шрифт */
     padding: 0.75rem 1.25rem;   /* больше «кликабельная» зона */
+  }
+  #join-us-page video {
+    display: block !important;
+    margin: 2rem auto !important;
+    max-width: 80% !important;
   }
 }  
 
