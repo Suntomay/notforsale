@@ -354,7 +354,7 @@ strong {
 #join-us-page video {
   display: block;           /* чтобы margin работал корректно */
   margin: 2rem auto;        /* 2rem сверху и снизу, по центру */
-  max-width: 100%;          /* чтобы не вылезало за контейнер */
+  max-width: 80%;          /* чтобы не вылезало за контейнер */
 }
 
 @media (max-width: 575px) {
