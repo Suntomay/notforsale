@@ -350,14 +350,13 @@ strong {
   margin-bottom: 1rem !important;  /* подберите значение под себя */
 }
 
-/* Отступы только вокруг видео на странице Join us */
-#join-us-page video {
-  display: block;           /* чтобы margin работал корректно */
-  margin: 2rem auto;        /* 2rem сверху и снизу, по центру */
-  max-width: 80%;          /* чтобы не вылезало за контейнер */
+/* По умолчанию — десктоп: обёртка растягивается по содержимому (видео во всю ширину колонки) */
+.video-wrapper {
+  width: auto;
+  margin: 0 auto; /* чтобы центрировалась при меньшей ширине */
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767.98px) {
   h1.section-title { font-size: 2.2rem;
   margin-bottom: 1.2rem; 
   }
@@ -383,11 +382,14 @@ strong {
   .contact-info a {
     font-size: 0.7rem !important;  /* ~11px */
   }
-    .site-logo-mobile {
+  .site-logo-mobile {
     height: 30px;
   }
-    h3.section-title:not(.news-main) {
+  h3.section-title:not(.news-main) {
     margin-bottom: 1.2rem !important;
+  }
+  #join-us-page .video-wrapper {
+    width: 100% !important;
   }
 }
 
@@ -396,8 +398,7 @@ strong {
     font-size: 1.25rem;         /* чуть больше шрифт */
     padding: 0.75rem 1.25rem;   /* больше «кликабельная» зона */
   }
-}
-
+}  
 
 @media (max-width: 991.98px) {
   .section-subheading {
