@@ -346,10 +346,8 @@ strong {
   height: auto;
 }
 
-/*  Сделала ряды под секциями уже и центрировала их */
-#projects-page .narrow-row {
-  max-width: 800px;    /* здесь задаю желаемую общую ширину блока */
-  margin: 0 auto;      /* центрирование по горизонтали */
+#join-us-page h1.section-title {
+  margin-bottom: 1rem !important;  /* подберите значение под себя */
 }
 
 
