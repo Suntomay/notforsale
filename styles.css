@@ -391,6 +391,13 @@ strong {
   }
 }
 
+@media (min-width: 768px) {
+  .navbar-nav .nav-link {
+    font-size: 1.25rem;         /* чуть больше шрифт */
+    padding: 0.75rem 1.25rem;   /* больше «кликабельная» зона */
+  }
+}
+
 
 @media (max-width: 991.98px) {
   .section-subheading {
