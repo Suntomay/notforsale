@@ -358,6 +358,39 @@ strong {
   margin-bottom: 1rem !important;  /* подберите значение под себя */
 }
 
+.declaration-text {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left !important; 
+}
+
+.declaration-text p {
+  margin-bottom: 2.5rem;         
+  line-height: 1.6;               
+}
+
+.purpose-intro {
+  color: #006400;        /* тот же зелёный, что у strong */
+  font-size: 1.5rem;     /* крупнее обычного текста */
+  font-weight: 700;      /* полу-/жирный — как у заголовков */
+  margin-bottom: 1.5rem;   /* отступ снизу перед следующим текстом */
+}
+
+.purpose-list {
+  text-align: left;       /* прижать текст к левому краю */
+  margin: 1rem auto 2rem; /* 1rem сверху, 2rem снизу, центр по ширине */
+  padding-left: 1.5rem;  /* отступ для цифр/маркировки */
+  max-width: 800px;       /* та же максимальная ширина, что у declaration-text */
+  line-height: 1.6; 
+  font-size: 1.25rem;  
+}
+
+.purpose-list li {
+  margin-bottom: 1.5rem;    /* зазор между пунктами */
+  line-height: 1.5;       /* чуть увеличенная высота строки */
+}
+
 @media (max-width: 767.98px) {
   h1.section-title { font-size: 2.2rem;
   margin-bottom: 1.2rem; 
