@@ -346,6 +346,14 @@ strong {
   height: auto;
 }
 
+#found-page .logo-found {
+  display: block;       /* чтобы margin работал */
+  margin: 1rem auto;    /* центрирование и отступы сверху/снизу */
+  max-width: 270px;     /* максимально 150px по ширине */
+  width: 50%;           /* но не больше 50% от контейнера */
+  height: auto;         /* сохраняем пропорции */
+}
+
 #join-us-page h1.section-title {
   margin-bottom: 1rem !important;  /* подберите значение под себя */
 }
@@ -384,6 +392,9 @@ strong {
   }
   #join-us-page .video-wrapper {
     width: 100% !important;
+  }
+  #found-page .logo-found {
+    max-width: 300px !important;
   }
 }
 
