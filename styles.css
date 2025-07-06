@@ -391,6 +391,54 @@ strong {
   line-height: 1.5;       /* чуть увеличенная высота строки */
 }
 
+/* Кнопка без фона и с плавным поворотом иконки */
+.navbar-toggler {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+}
+.navbar-toggler-icon {
+  transition: transform 0.4s ease;
+}
+/* При открытии (когда aria-expanded="true", Bootstrap даёт .collapsed=False) */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  transform: rotate(90deg);
+}
+
+/* Скрываем переполнение и задаём анимацию панели */
+.collapse.navbar-collapse {
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  max-height: 0;       /* по умолчанию «свернуто» */
+  opacity: 0;
+}
+/* Когда открыто — разворачивает панель */
+.collapse.navbar-collapse.show {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Анимирует пункты меню по-очерёдно */
+.navbar-nav .nav-link {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+/* При показе меню — включает анимацию */
+.collapse.navbar-collapse.show .nav-item:nth-child(1) .nav-link {
+  transition-delay: 0.1s;
+}
+.collapse.navbar-collapse.show .nav-item:nth-child(2) .nav-link {
+  transition-delay: 0.2s;
+}
+.collapse.navbar-collapse.show .nav-item:nth-child(3) .nav-link {
+  transition-delay: 0.3s;
+}
+.collapse.navbar-collapse.show .nav-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (max-width: 767.98px) {
   h1.section-title { font-size: 2.2rem;
   margin-bottom: 1.2rem; 
