@@ -23,6 +23,9 @@
   font-size: 1.125rem;     /* 18px */
   color: #006400 !important;/* тёмно-зелёный */
   padding: 0.5rem 1rem;     /* увеличить «кликабельную» область */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 /* 2. Цвет при наведении */
@@ -418,12 +421,6 @@ strong {
   opacity: 1;
 }
 
-/* Анимирует пункты меню по-очерёдно */
-.navbar-nav .nav-link {
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
 /* При показе меню — включает анимацию */
 .collapse.navbar-collapse.show .nav-item:nth-child(1) .nav-link {
   transition-delay: 0.1s;
@@ -500,6 +497,21 @@ strong {
   }
   h3.section-title:not(.news-main) {
     margin-bottom: 4rem !important;
+  }
+}
+
+@media (min-width: 576px) {
+  /* 1) Меню всегда видно */
+  .collapse.navbar-collapse {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+  }
+
+  /* 2) Пункты меню всегда непрозрачны */
+  .navbar-nav .nav-link {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
 
