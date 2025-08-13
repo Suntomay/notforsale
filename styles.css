@@ -467,6 +467,9 @@ strong {
     margin-left: auto;  /* центрирую */
     margin-right: auto; /* центрирую */
   }
+  .video-ratio-md { 
+    --bs-aspect-ratio: 70%; 
+  }
   .section-title {
     margin-top: 2rem;
     margin-bottom: 3.5rem; /* чуть больше «воздуха» на планшетах/ПК, опционально */
@@ -487,7 +490,7 @@ strong {
 
 @media (min-width: 992px) {
   .video-md-narrow { 
-    max-width: 680px;     /* можно 620–680 по вкусу */
+    max-width: 640px;     /* можно 620–680 по вкусу */
   } 
 }
 
