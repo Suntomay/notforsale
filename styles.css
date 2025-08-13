@@ -39,21 +39,14 @@
   margin-left: 1rem;
 }
 
-.news-main {
-  margin-bottom: 7rem;
-}
-
-h1.section-title:not(.news-main) {
-  margin-bottom: 6rem !important;
-}
-
 .section-title {
   font-family: 'Playfair Display', serif; /* ваш заголовочный шрифт */
   font-size: 3rem;                        /* крупный размер */
   color: #006400;                         /* темно-зеленый */
   font-weight: 700;                       /* максимально жирный */
-  margin-bottom: 2rem;                    /* большое расстояние на ПК */
-  margin-top: 0 !important;               /* или 0, если нужно совсем вплотную */
+  /* единые отступы на мобильных */                     
+  margin-bottom: 3rem;                  
+  margin-top: 1.5rem;           
 }
 
 section, .py-5 {
@@ -470,9 +463,13 @@ strong {
     max-width: 80% !important;
   }
   .video-md-narrow {
-    max-width: 560px;   /* можно 520–640px */
+    max-width: 600px;   /* можно 520–640px */
     margin-left: auto;  /* центрирую */
     margin-right: auto; /* центрирую */
+  }
+  .section-title {
+    margin-top: 2rem;
+    margin-bottom: 3.5rem; /* чуть больше «воздуха» на планшетах/ПК, опционально */
   }
 }  
 
@@ -486,6 +483,12 @@ strong {
   h3.section-title:not(.news-main) {
     margin-bottom: 4rem !important;
   }
+}
+
+@media (min-width: 992px) {
+  .video-md-narrow { 
+    max-width: 680px;     /* можно 620–680 по вкусу */
+  } 
 }
 
 @media (min-width: 576px) {
