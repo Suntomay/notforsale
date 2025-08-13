@@ -486,6 +486,11 @@ strong {
     margin: 2rem auto !important;
     max-width: 80% !important;
   }
+  .video-md-narrow {
+    max-width: 560px;   /* можно 520–640px */
+    margin-left: auto;  /* центрирую */
+    margin-right: auto; /* центрирую */
+  }
 }  
 
 @media (max-width: 991.98px) {
