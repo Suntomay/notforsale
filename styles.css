@@ -412,6 +412,11 @@ strong {
   transform: translateY(0);
 }
 
+/* Базовый отступ сверху */
+#news  {
+  margin-top: 3.5rem; 
+}
+
 @media (max-width: 767.98px) {
   h1.section-title { font-size: 2.2rem;
   margin-bottom: 1.2rem; 
@@ -468,11 +473,21 @@ strong {
     margin-right: auto; /* центрирую */
   }
   .video-ratio-md { 
-    --bs-aspect-ratio: 70%; 
+    --bs-aspect-ratio: 70%; /* 16:9 = 56.25%. Сделала 70% на md+ */
   }
   .section-title {
     margin-top: 2rem;
     margin-bottom: 3.5rem; /* чуть больше «воздуха» на планшетах/ПК, опционально */
+  }
+  .header-right-stack { 
+    margin-top: auto;           /* «съедает» всё сверху → блок у нижнего края */
+  }
+  .site-header .navbar { 
+    padding-top: 0; 
+    padding-bottom: 0; 
+  }
+  #news { 
+    margin-top: 5rem; 
   }
 }  
 
