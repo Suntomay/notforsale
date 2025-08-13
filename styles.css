@@ -289,34 +289,17 @@ p {
   margin-bottom: 2rem;
 }
 
-#projects-page .gallery-card img {
-  object-fit: contain;
-  position: static !important;
-  inset: auto !important;
-  width: 100%   !important;
-  height: auto  !important;
-  display: block!important;
-}
-
-/* По желанию: задайте max-width, чтобы не было слишком растянуто */
-#projects-page .gallery-card {
-  max-width: 800px; /* например */
-  margin: 0 auto;   /* центрируем */
-  aspect-ratio: unset; /* убираем заданное соотношение сторон */
-}
-
 /* 300×300 px для всех project-img, картинка впишется внутри */
 #projects-page .gallery-card.project-img {
   width: 300px;
   height: 300px;
-  max-width: none;  /* отменяем предыдущие max-width */
+  overflow: hidden;       /* чтобы закругления корректно обрезали фото */
 }
 #projects-page .gallery-card.project-img img {
-  position: absolute;  /* восстанавливаем режим cover */
-  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;  /* кадрирование по центру */
+  display: block;
 }
 
 #projects-page h3.section-subheading.gallery-subheading {
