@@ -1,3 +1,4 @@
+/* === 0. Prologue & Fonts / Loose comments === */
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
@@ -7,6 +8,7 @@
     url('./font/Montserrat-Bold.woff2') format('woff2'),
     url('./font/Montserrat-Bold.woff')  format('woff');
 }
+
 
 /* локальное подключение Playfair Display Bold (700) */
 @font-face {
@@ -19,25 +21,8 @@
     url('./font/PlayfairDisplay-Bold.woff')    format('woff');
 }
 
-.navbar-nav .nav-link {
-  font-size: 1.125rem;     /* 18px */
-  color: #006400 !important;/* тёмно-зелёный */
-  padding: 0.5rem 1rem;     /* увеличить «кликабельную» область */
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
+/* === 1. Typography (headings, paragraphs) === */
 
-/* 2. Цвет при наведении */
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:focus {
-  color: #009900 !important;
-}
-
-/* 3. Отступ между пунктами */
-.navbar-nav .nav-item + .nav-item {
-  margin-left: 1rem;
-}
 
 .section-title {
   font-family: 'Playfair Display', serif; /* ваш заголовочный шрифт */
@@ -49,9 +34,6 @@
   margin-top: 1.5rem;           
 }
 
-section, .py-5 {
-  padding-top: 1rem !important; /* или 0, если нужен край */
-}
 
 h3.section-subheading {
   font-family: 'Montserrat', sans-serif; /* жирный геометрический гротеск */
@@ -63,58 +45,127 @@ h3.section-subheading {
   margin-bottom: 0.5rem;
 }
 
-p {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont,
-               "Segoe UI", Roboto, "Helvetica Neue", Arial,
-               "Noto Sans", sans-serif,
-               "Apple Color Emoji", "Segoe UI Emoji",
-               "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1.25rem;
-  line-height: 1.7;
+
+/* Заголовок секции чуть уже по отступам */
+#lena-story .section-title {
+  font-size: 2rem;
+  color: #006400;
+  margin-bottom: 1rem;
 }
+
+
+#maxima-story .section-title {
+  font-size: 2rem;
+  color: #006400;
+  margin-bottom: 1rem;
+}
+
+
+#phoebe-story .section-title {
+  font-size: 2rem;
+  color: #006400;
+  margin-bottom: 1rem;
+}
+
+/* === 2. Header & Navigation === */
+
+
+.navbar-nav .nav-link {
+  font-size: 1.125rem;     /* 18px */
+  color: #006400 !important;/* тёмно-зелёный */
+  padding: 0.5rem 1rem;     /* увеличить «кликабельную» область */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+/* 2. Цвет при наведении */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #009900 !important;
+}
+
+
+/* 3. Отступ между пунктами */
+.navbar-nav .nav-item + .nav-item {
+  margin-left: 1rem;
+}
+
+
+/* Кнопка без фона и с плавным поворотом иконки */
+.navbar-toggler {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+}
+
+.navbar-toggler-icon {
+  transition: transform 0.4s ease;
+}
+
+/* При открытии (когда aria-expanded="true", Bootstrap даёт .collapsed=False) */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  transform: rotate(90deg);
+}
+
+
+/* Скрываем переполнение и задаём анимацию панели */
+.collapse.navbar-collapse {
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  max-height: 0;       /* по умолчанию «свернуто» */
+  opacity: 0;
+}
+
+/* Когда открыто — разворачивает панель */
+.collapse.navbar-collapse.show {
+  max-height: 500px;
+  opacity: 1;
+}
+
+
+/* При показе меню — включает анимацию */
+.collapse.navbar-collapse.show .nav-item:nth-child(1) .nav-link {
+  transition-delay: 0.1s;
+}
+
+.collapse.navbar-collapse.show .nav-item:nth-child(2) .nav-link {
+  transition-delay: 0.2s;
+}
+
+.collapse.navbar-collapse.show .nav-item:nth-child(3) .nav-link {
+  transition-delay: 0.3s;
+}
+
+.collapse.navbar-collapse.show .nav-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === 3. Media (images, videos) & Gallery === */
+
 
 .object-fit-cover {
   object-fit: cover;
 }
 
+
 .object-fit-contain {
   object-fit: contain;
 }
+
 
 .shadow-effect {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: box-shadow 0.3s;
 }
 
+
 .shadow-effect:hover {
   box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* тень чуть сильнее при наведении */
 }
 
-.contact-info {
-  font-size: 0.8rem;              /* вместо 1.25rem или 1.125rem */
-  color: #000;              /* оставляем тёмно-зелёный для не-ссылочного текста */
-  margin-bottom: 0.5rem;
-}
-
-/* 2) Ссылки в контактной строке — тёмно-зелёные */
-.contact-info a {
-  color: #006400;
-  text-decoration: none;
-  transition: color 0.2s ease-in-out;
-}
-
-/* 3) При наведении/фокусе — чуть светлее */
-.contact-info a:hover,
-.contact-info a:focus {
-  color: #009900;               /* светло-зелёный оттенок */
-  text-decoration: underline;
-}
-
-.contact-info,
-.contact-info p,
-.contact-info a {
-  font-size: 0.8rem !important;   /* ~12px — вместо 0.875rem (14px) */
-}
 
 .gallery-card {
   position: relative;
@@ -126,6 +177,7 @@ p {
   height: 400px;
 }
 
+
 .gallery-card img {
   position: absolute;
   inset: 0;
@@ -135,22 +187,90 @@ p {
   max-width: 100%;
 }
 
-#lena-story {
-  background-color: #f9f9f9; /* лёгкий фон по желанию */
-  border-radius: 0.5rem;
-}
 
 #lena-story .story-image {
   max-width: 100%;
   height: auto;
 }
 
-/* Заголовок секции чуть уже по отступам */
-#lena-story .section-title {
-  font-size: 2rem;
-  color: #006400;
-  margin-bottom: 1rem;
+
+#maxima-story .story-image {
+  max-width: 100%;
+  height: auto;
 }
+
+
+#phoebe-story .story-image {
+  max-width: 100%;
+  height: auto;
+}
+
+
+#projects-page .gallery-card {
+  aspect-ratio: auto !important;
+}
+
+
+/* Ограничиваем ширину главного логотипа */
+.site-logo {
+  max-width: 200px;  /* подберите своё значение */
+  height: auto;
+  display: block;    /* чтобы убрать лишние отступы */
+}
+
+
+/* 300×300 px для всех project-img, картинка впишется внутри */
+#projects-page .gallery-card.project-img {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;       /* чтобы закругления корректно обрезали фото */
+}
+
+#projects-page .gallery-card.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* кадрирование по центру */
+  display: block;
+}
+
+
+#projects-page h3.section-subheading.gallery-subheading {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 700                           !important;
+  font-size:   1.5rem                        !important; /* тот же размер, что и в index */
+  color:       #006400                       !important;
+  text-transform: uppercase                  !important;
+  letter-spacing: 0.02em                     !important;
+  margin-top:    3rem                        !important; /* увеличенный зазор от картинки */
+  margin-bottom: 2rem                      !important; /* как mb-3 у других h3 */
+}
+
+
+.site-logo-mobile {
+  height: 40px;
+}
+
+
+/*  Полное отображение «photo collage» */
+.collage-wrapper {
+  max-width: 800px;        /* по желанию, ограничиваем ширину */
+  margin: 0 auto;          /* центрируем блок */
+}
+
+.collage-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* === 4. Stories sections (Lena/Maxima/Phoebe) === */
+
+
+#lena-story {
+  background-color: #f9f9f9; /* лёгкий фон по желанию */
+  border-radius: 0.5rem;
+}
+
 
 /* Параграфы удобочитаемого размера */
 #lena-story p {
@@ -159,22 +279,13 @@ p {
   color: #333;
 }
 
+
 #maxima-story {
   background-color: #fafafa;   /* светлый фон, по желанию */
   border-radius: 0.5rem;
   padding-bottom: 3rem;
 }
 
-#maxima-story .story-image {
-  max-width: 100%;
-  height: auto;
-}
-
-#maxima-story .section-title {
-  font-size: 2rem;
-  color: #006400;
-  margin-bottom: 1rem;
-}
 
 #maxima-story p {
   font-size: 1rem;
@@ -182,21 +293,12 @@ p {
   color: #333;
 }
 
+
 #phoebe-story {
   background-color: #f9f9f9;   /* светлый фон, можно убрать или сменить */
   border-radius: 0.5rem;       /* скруглённые углы */
 }
 
-#phoebe-story .story-image {
-  max-width: 100%;
-  height: auto;
-}
-
-#phoebe-story .section-title {
-  font-size: 2rem;
-  color: #006400;
-  margin-bottom: 1rem;
-}
 
 #phoebe-story p {
   font-size: 1rem;
@@ -204,31 +306,8 @@ p {
   color: #333;
 }
 
-.site-footer {
-  background-color: #f1f1f1;    /* светлый фон */
-  color: #333;                  /* цвет текста */
-}
+/* === 5. Page: Projects === */
 
-.site-footer .footer-title {
-  font-size: 1.75rem;
-  color: #006400;               /* тёмно-зелёный */
-}
-
-.site-footer p {
-  margin: 0.25rem 0;            /* небольшой вертикальный gap */
-  font-size: 1rem;
-}
-
-.site-footer .contact-info {
-  color: #28a745;               /* ярко-зелёный для ссылки */
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.site-footer .contact-info:hover {
-  color: #009900;               /* чуть светлее при наведении */
-  text-decoration: underline;
-}
 
 #projects-page h2.section-subheading {
   font-family: 'Playfair Display', serif !important;
@@ -244,16 +323,6 @@ p {
   font-size: 2.25rem;     /* оставляем меньше, чем у h2 */
 }
 
-#projects-page .gallery-card {
-  aspect-ratio: auto !important;
-}
-
-/* Ограничиваем ширину главного логотипа */
-.site-logo {
-  max-width: 200px;  /* подберите своё значение */
-  height: auto;
-  display: block;    /* чтобы убрать лишние отступы */
-}
 
 /* Заголовок Projects (h1) */
 #projects-page h1.section-title {
@@ -262,48 +331,15 @@ p {
   margin-bottom: 2rem;
 }
 
-/* 300×300 px для всех project-img, картинка впишется внутри */
-#projects-page .gallery-card.project-img {
-  width: 300px;
-  height: 300px;
-  overflow: hidden;       /* чтобы закругления корректно обрезали фото */
-}
-#projects-page .gallery-card.project-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;  /* кадрирование по центру */
-  display: block;
+/* === 6. Page: Join Us === */
+
+
+#join-us-page h1.section-title {
+  margin-bottom: 1rem !important;  /* подберите значение под себя */
 }
 
-#projects-page h3.section-subheading.gallery-subheading {
-  font-family: 'Montserrat', sans-serif !important;
-  font-weight: 700                           !important;
-  font-size:   1.5rem                        !important; /* тот же размер, что и в index */
-  color:       #006400                       !important;
-  text-transform: uppercase                  !important;
-  letter-spacing: 0.02em                     !important;
-  margin-top:    3rem                        !important; /* увеличенный зазор от картинки */
-  margin-bottom: 2rem                      !important; /* как mb-3 у других h3 */
-}
+/* === 7. Page: Foundation Declaration === */
 
-strong {
-  color: #004d00;
-}
-
-.site-logo-mobile {
-  height: 40px;
-}
-
-/*  Полное отображение «photo collage» */
-.collage-wrapper {
-  max-width: 800px;        /* по желанию, ограничиваем ширину */
-  margin: 0 auto;          /* центрируем блок */
-}
-.collage-wrapper img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 
 #found-page .logo-found {
   display: block;       /* чтобы margin работал */
@@ -313,9 +349,102 @@ strong {
   height: auto;         /* сохраняем пропорции */
 }
 
-#join-us-page h1.section-title {
-  margin-bottom: 1rem !important;  /* подберите значение под себя */
+/* === 8. Footer === */
+
+
+.site-footer {
+  background-color: #f1f1f1;    /* светлый фон */
+  color: #333;                  /* цвет текста */
 }
+
+
+.site-footer .footer-title {
+  font-size: 1.75rem;
+  color: #006400;               /* тёмно-зелёный */
+}
+
+
+.site-footer p {
+  margin: 0.25rem 0;            /* небольшой вертикальный gap */
+  font-size: 1rem;
+}
+
+
+.site-footer .contact-info {
+  color: #28a745;               /* ярко-зелёный для ссылки */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+.site-footer .contact-info:hover {
+  color: #009900;               /* чуть светлее при наведении */
+  text-decoration: underline;
+}
+
+/* === 9. Contacts === */
+
+
+.contact-info {
+  font-size: 0.8rem;              /* вместо 1.25rem или 1.125rem */
+  color: #000;              /* оставляем тёмно-зелёный для не-ссылочного текста */
+  margin-bottom: 0.5rem;
+}
+
+
+/* 2) Ссылки в контактной строке — тёмно-зелёные */
+.contact-info a {
+  color: #006400;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+
+/* 3) При наведении/фокусе — чуть светлее */
+.contact-info a:hover,
+.contact-info a:focus {
+  color: #009900;               /* светло-зелёный оттенок */
+  text-decoration: underline;
+}
+
+
+.contact-info,
+.contact-info p,
+.contact-info a {
+  font-size: 0.8rem !important;   /* ~12px — вместо 0.875rem (14px) */
+}
+
+/* === 10. NEWS section === */
+
+
+/* Базовый отступ сверху */
+#news  {
+  margin-top: 3.5rem; 
+}
+
+/* === 11. Other / uncategorized === */
+
+
+section, .py-5 {
+  padding-top: 1rem !important; /* или 0, если нужен край */
+}
+
+
+p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, "Helvetica Neue", Arial,
+               "Noto Sans", sans-serif,
+               "Apple Color Emoji", "Segoe UI Emoji",
+               "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.25rem;
+  line-height: 1.7;
+}
+
+
+strong {
+  color: #004d00;
+}
+
 
 .declaration-text {
   max-width: 800px;
@@ -324,10 +453,12 @@ strong {
   text-align: left !important; 
 }
 
+
 .declaration-text p {
   margin-bottom: 2.5rem;         
   line-height: 1.6;               
 }
+
 
 .purpose-intro {
   color: #006400;        /* тот же зелёный, что у strong */
@@ -335,6 +466,7 @@ strong {
   font-weight: 700;      /* полу-/жирный — как у заголовков */
   margin-bottom: 1.5rem;   /* отступ снизу перед следующим текстом */
 }
+
 
 .purpose-list {
   text-align: left;       /* прижать текст к левому краю */
@@ -345,57 +477,14 @@ strong {
   font-size: 1.25rem;  
 }
 
+
 .purpose-list li {
   margin-bottom: 1.5rem;    /* зазор между пунктами */
   line-height: 1.5;       /* чуть увеличенная высота строки */
 }
 
-/* Кнопка без фона и с плавным поворотом иконки */
-.navbar-toggler {
-  background: none;
-  border: none;
-  padding: 0.5rem;
-}
-.navbar-toggler-icon {
-  transition: transform 0.4s ease;
-}
-/* При открытии (когда aria-expanded="true", Bootstrap даёт .collapsed=False) */
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-  transform: rotate(90deg);
-}
+/* === 12. Media Queries === */
 
-/* Скрываем переполнение и задаём анимацию панели */
-.collapse.navbar-collapse {
-  overflow: hidden;
-  transition: max-height 0.4s ease, opacity 0.4s ease;
-  max-height: 0;       /* по умолчанию «свернуто» */
-  opacity: 0;
-}
-/* Когда открыто — разворачивает панель */
-.collapse.navbar-collapse.show {
-  max-height: 500px;
-  opacity: 1;
-}
-
-/* При показе меню — включает анимацию */
-.collapse.navbar-collapse.show .nav-item:nth-child(1) .nav-link {
-  transition-delay: 0.1s;
-}
-.collapse.navbar-collapse.show .nav-item:nth-child(2) .nav-link {
-  transition-delay: 0.2s;
-}
-.collapse.navbar-collapse.show .nav-item:nth-child(3) .nav-link {
-  transition-delay: 0.3s;
-}
-.collapse.navbar-collapse.show .nav-link {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Базовый отступ сверху */
-#news  {
-  margin-top: 3.5rem; 
-}
 
 @media (max-width: 767.98px) {
   h1.section-title { font-size: 2.2rem;
@@ -433,6 +522,7 @@ strong {
   }
 }
 
+
 @media (min-width: 768px) {
   .navbar-nav .nav-link {
     font-size: 1.25rem;         /* чуть больше шрифт */
@@ -466,7 +556,8 @@ strong {
   #news { 
     margin-top: 5rem; 
   }
-}  
+}
+  
 
 @media (max-width: 991.98px) {
   .section-subheading {
@@ -480,11 +571,13 @@ strong {
   }
 }
 
+
 @media (min-width: 992px) {
   .video-md-narrow { 
     max-width: 640px;     /* можно 620–680 по вкусу */
   } 
 }
+
 
 @media (min-width: 576px) {
   /* 1) Меню всегда видно */
