@@ -63,13 +63,6 @@ h3.section-subheading {
   margin-bottom: 0.5rem;
 }
 
-h4.section-subheading {
-  font-size: 2rem;
-  color: #006400;
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-
 p {
   font-family: system-ui, -apple-system, BlinkMacSystemFont,
                "Segoe UI", Roboto, "Helvetica Neue", Arial,
@@ -78,13 +71,6 @@ p {
                "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1.25rem;
   line-height: 1.7;
-}
-
-.media-wrapper {
-  overflow: hidden;
-  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.13), 0 1.5px 5px 0 rgba(0,0,0,0.09);
-  border-radius: 16px;
-  background: #fff;
 }
 
 .object-fit-cover {
@@ -108,12 +94,6 @@ p {
   font-size: 0.8rem;              /* вместо 1.25rem или 1.125rem */
   color: #000;              /* оставляем тёмно-зелёный для не-ссылочного текста */
   margin-bottom: 0.5rem;
-}
-
-.contact-info .contact-link {
-  color: #006400;           /* темно-зелёный */
-  text-decoration: none;
-  transition: color 0.2s;  
 }
 
 /* 2) Ссылки в контактной строке — тёмно-зелёные */
@@ -426,10 +406,6 @@ strong {
   }
   p { 
     font-size: 1.1rem; 
-  }
-  #news img { 
-    width: 100% !important; 
-    height: auto !important; 
   }
   #news .row > .col-12:first-child img {
     width: 60% !important;      /* измените по желанию (например, 60%) */
